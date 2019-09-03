@@ -1,0 +1,34 @@
+<!doctype html>
+ 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Template Polymer 3.0 App">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#fff">
+
+  <link rel="icon" href="manifest/favicon.ico">
+
+  <script>
+    // HACK(keanulee): The Redux package assumes `process` exists - mock it here before
+    // the module is loaded.
+    window.process = {
+      env: {
+        NODE_ENV: 'production'
+      }
+    };
+  </script>
+  <link rel="manifest" href="manifest.json">
+
+  <link rel="canonical" href="https://start-polymer3.firebaseapp.com/" />
+  <link rel="stylesheet" href ='./reset.css'>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js" async></script>
+  <script src="./index.js" type="module" async></script>
+  <title>Start Polymer 3.0</title>
+</head>
+<body>
+ <my-body></my-body>
+</body>
+</html>

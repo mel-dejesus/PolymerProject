@@ -1,0 +1,25 @@
+{
+  "name": "polymerPlay",
+  "version": "1.0.0",
+  "description": "",
+  "repository": "https://github.com/PolymerLabs/polymer-3-first-element.git",
+  "main": "src/start-polymer3.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/polymer-cli/bin/polymer.js serve --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@polymer/app-route": "github:PolymerElements/app-route",
+    "@polymer/paper-button": "^3.0.1",
+    "@polymer/paper-checkbox": "latest",
+    "@polymer/polymer": "latest",
+    "@webcomponents/webcomponentsjs": "latest",
+    "polymer-cli": "^1.9.11",
+    "pwa-helpers": "^0.9.1",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0"
+  }
+}
