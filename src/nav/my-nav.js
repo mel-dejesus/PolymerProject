@@ -1,8 +1,5 @@
-import { PolymerElement, html } from '../../node_modules/@polymer/polymer/polymer-element.js';
-import {} from '../../node_modules/@polymer/polymer/lib/elements/dom-repeat.js'
-import '@polymer/paper-button/paper-button.js';
-// import { PolymerElement, html } from '@polymer/polymer';
-// import {} from '@polymer/polymer/lib/elements/dom-repeat'
+import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
+import {} from '@polymer/polymer/lib/elements/dom-repeat.js'
 import './buttons.js';
 
 class MyNav extends PolymerElement {
@@ -26,11 +23,9 @@ class MyNav extends PolymerElement {
           }
         </style>
     
- 
         <div>
           <h2> To Do App </h2>          
           <my-button></my-button>
-          <paper-button toggles raised class="green">toggles</paper-button>
         </div>
       `;
     }    

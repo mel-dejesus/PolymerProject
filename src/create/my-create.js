@@ -9,16 +9,6 @@ import '../css/sharedStyles.js'
 
 export class MyCreate extends connect(store)(PolymerElement) {
 
-  static get properties() {
-    return {
-      // tasks: {
-      //   type: Array, 
-      //   notify: true, 
-      //   observer: 'newTask', 
-       
-      // } 
-    }
-  }
   stateChanged(state) {
     const {tasks, message} = state 
     Object.assign(this, {message, tasks}) 
@@ -38,26 +28,14 @@ export class MyCreate extends connect(store)(PolymerElement) {
   static get template() {
     return html`
       <style include='style-element' >
-     
-  
- 
- 
         button {
           height: 2vh;
           border-radius: 10%;
-   
         }
-
-
-
       </style>
-  
-      <!-- shadow DOM goes here -->
+
       <div id="box">
       <form>
-      <!-- <fieldset> -->
-        <!-- <legend>Create a New Task</legend> -->
-        <!-- <div id="real_fieldset"> -->
           <div id="inputBoxes">
             <!-- input 1 -->
             <div class ="input">
@@ -74,8 +52,6 @@ export class MyCreate extends connect(store)(PolymerElement) {
           <div id="buttons">
             <button on-click="submit" type="submit">Submit Task</button> 
           </div>
-        <!-- </div> -->
-      <!-- </fieldset> -->
        </form>
       </div>
     `;

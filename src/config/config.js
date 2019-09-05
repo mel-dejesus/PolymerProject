@@ -11,15 +11,14 @@ export class MyConfig extends connect(store)(PolymerElement) {
 
   static get properties() {
     return {
- 
       toggle: {
         type: Boolean, 
         value: false, 
         notify: true, 
-        
       }
     }
   }
+
   stateChanged(state) {
     const {tasks, message, user} = state 
     Object.assign(this, {message, tasks, user}) 
@@ -27,9 +26,7 @@ export class MyConfig extends connect(store)(PolymerElement) {
     this.nDone = this.tasks.filter(e => e.done)
     this.nDone = this.nDone.length
     this.nHidden = this.tasks.filter(e => e.hide) 
- 
     this.nHidden = this.nHidden.length
-  
   }
  
   submit(e) {
@@ -42,37 +39,22 @@ export class MyConfig extends connect(store)(PolymerElement) {
       this.shadowRoot.querySelector("#user").setAttribute('disabled', '')
       this.shadowRoot.querySelector("button").textContent = "Edit UserName"
       const newName = this.shadowRoot.querySelector("#user").value
-      console.log(newName)
       editConfig(newName)
     }
-
- 
   }
 
   static get template() {
     return html`
       <style include='style-element' >
-     
-  
- 
- 
         button {
           height: 2vh;
           border-radius: 10%; 
           padding: 10px;
-   
         }
-
-
-
       </style>
   
-      <!-- shadow DOM goes here -->
       <div id="box">
       <form>
-      <!-- <fieldset> -->
-        <!-- <legend>Create a New Task</legend> -->
-        <!-- <div id="real_fieldset"> -->
           <div id="inputBoxes">
             <!-- input 1 -->
             <div class ="input">
@@ -99,8 +81,6 @@ export class MyConfig extends connect(store)(PolymerElement) {
           <div id="buttons">
             <button on-click="submit" type="submit">Edit UserName</button> 
           </div>
-        <!-- </div> -->
-      <!-- </fieldset> -->
        </form>
       </div>
     `;

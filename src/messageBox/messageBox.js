@@ -8,25 +8,16 @@ import { newNote } from '../redux/action'
 
 
 export class MessageBox extends connect(store)(PolymerElement) {
-
+  
   stateChanged(state) {
- 
     const {tasks, message, user, show_hidden} = state 
-    
     Object.assign(this, {message, tasks, user, show_hidden})
- 
-    
     if (show_hidden) {
       let hidden = tasks.filter( e => {
         return e.hide == true
       })
-      if (hidden.length < 1) {
-        this.message = "you have no hidden files!"
-      } else {
-        this.message = "here are your hidden files!"
-      }
+      this.message = (hidden.length < 1) ? "you have no hidden files!" : "here are your hidden files!"
     }
-    
   }
  
   submit(e) {
@@ -49,13 +40,10 @@ export class MessageBox extends connect(store)(PolymerElement) {
         }
         #message {
           padding: 3vh;
-          
           font-family: 'Open Sans', sans-serif;
           align-self: center;
-       
           font-size: 14 rem;  
           letter-spacing: 0.25;
-        
         }
       </style>
   
